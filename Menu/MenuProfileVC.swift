@@ -8,9 +8,12 @@
 import UIKit
 
 class MenuProfileVC: UIViewController {
+    
+    let viewModel: MenuProfileViewModel = MenuProfileViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemPink
+        viewModel.fetch(.mock)
     }
 }
