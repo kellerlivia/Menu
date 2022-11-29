@@ -14,6 +14,6 @@ class MenuProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemPink
-        viewModel.fetch(.mock)
+        viewModel.fetch(.request)
     }
 }

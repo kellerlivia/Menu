@@ -20,10 +20,16 @@ class MenuProfileViewModel{
         switch typeFetch {
         case .mock:
             self.service.getMenuFromJson { success, error in
-                print(success)
+                if let ok = success {
+                    print(ok)
+                }
             }
         case .request:
-            break
+            self.service.getMenu { success, error in
+                if let ok = success {
+                    print(ok)
+                }
+            }
         }
     }
 }
