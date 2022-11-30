@@ -78,7 +78,9 @@ extension MenuProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: MenuProfileTableViewCell.indetifier, for: indexPath) as? MenuProfileTableViewCell
+        cell?.setupCell(title: viewModel.titleCell(indexPath))
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

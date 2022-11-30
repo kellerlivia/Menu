@@ -66,6 +66,10 @@ class MenuProfileViewModel {
         return self.data[section].title ?? ""
     }
     
+    public func titleCell(_ indexPath: IndexPath) -> String {
+        return self.data[indexPath.section].child?[indexPath.row].title ?? ""
+    }
+    
     public func constainsSection(_ section: Int) -> Bool {
         return self.hiddenSection.contains(section)
     }

@@ -20,6 +20,8 @@
 		D80D58D02936864A00BE9B25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D80D58CF2936864A00BE9B25 /* Alamofire */; };
 		D80D58D42937822A00BE9B25 /* MenuProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58D32937822A00BE9B25 /* MenuProfileScreen.swift */; };
 		D80D58D7293790BF00BE9B25 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58D6293790BF00BE9B25 /* SectionView.swift */; };
+		D80D58DA2937A81C00BE9B25 /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58D92937A81C00BE9B25 /* MenuProfileTableViewCell.swift */; };
+		D80D58DC2937A8C100BE9B25 /* MenuProfileTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58DB2937A8C100BE9B25 /* MenuProfileTableViewCellScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		D80D58CC2936807300BE9B25 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		D80D58D32937822A00BE9B25 /* MenuProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileScreen.swift; sourceTree = "<group>"; };
 		D80D58D6293790BF00BE9B25 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		D80D58D92937A81C00BE9B25 /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
+		D80D58DB2937A8C100BE9B25 /* MenuProfileTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCellScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		D80D58AB2936712800BE9B25 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				D80D58D82937A7EC00BE9B25 /* Cell */,
 				D80D58D5293790A900BE9B25 /* Section */,
 				D80D58D22937821100BE9B25 /* Screen */,
 				D80D58D1293781BD00BE9B25 /* VC */,
@@ -141,6 +146,23 @@
 				D80D58D6293790BF00BE9B25 /* SectionView.swift */,
 			);
 			path = Section;
+			sourceTree = "<group>";
+		};
+		D80D58D82937A7EC00BE9B25 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D80D58DD2937A8C600BE9B25 /* Screen */,
+				D80D58D92937A81C00BE9B25 /* MenuProfileTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D80D58DD2937A8C600BE9B25 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D80D58DB2937A8C100BE9B25 /* MenuProfileTableViewCellScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +246,12 @@
 				D80D58B12936712800BE9B25 /* MenuProfileVC.swift in Sources */,
 				D80D58D7293790BF00BE9B25 /* SectionView.swift in Sources */,
 				D80D58AD2936712800BE9B25 /* AppDelegate.swift in Sources */,
+				D80D58DA2937A81C00BE9B25 /* MenuProfileTableViewCell.swift in Sources */,
 				D80D58CD2936807300BE9B25 /* GenericService.swift in Sources */,
 				D80D58CB29367E8F00BE9B25 /* MenuProfileService.swift in Sources */,
 				D80D58C529367B8B00BE9B25 /* MenuProfile.swift in Sources */,
 				D80D58C829367D3200BE9B25 /* MenuProfileViewModel.swift in Sources */,
+				D80D58DC2937A8C100BE9B25 /* MenuProfileTableViewCellScreen.swift in Sources */,
 				D80D58AF2936712800BE9B25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
