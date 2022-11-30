@@ -18,6 +18,7 @@
 		D80D58CB29367E8F00BE9B25 /* MenuProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58CA29367E8F00BE9B25 /* MenuProfileService.swift */; };
 		D80D58CD2936807300BE9B25 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58CC2936807300BE9B25 /* GenericService.swift */; };
 		D80D58D02936864A00BE9B25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D80D58CF2936864A00BE9B25 /* Alamofire */; };
+		D80D58D42937822A00BE9B25 /* MenuProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D58D32937822A00BE9B25 /* MenuProfileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D80D58C729367D3200BE9B25 /* MenuProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileViewModel.swift; sourceTree = "<group>"; };
 		D80D58CA29367E8F00BE9B25 /* MenuProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileService.swift; sourceTree = "<group>"; };
 		D80D58CC2936807300BE9B25 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		D80D58D32937822A00BE9B25 /* MenuProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,14 @@
 		D80D58AB2936712800BE9B25 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				D80D58D22937821100BE9B25 /* Screen */,
+				D80D58D1293781BD00BE9B25 /* VC */,
+				D80D58C929367E7A00BE9B25 /* Service */,
+				D80D58C629367D0900BE9B25 /* ViewModel */,
+				D80D58C329367B7500BE9B25 /* Model */,
+				D80D58C02936774600BE9B25 /* Json */,
 				D80D58AC2936712800BE9B25 /* AppDelegate.swift */,
 				D80D58AE2936712800BE9B25 /* SceneDelegate.swift */,
-				D80D58B02936712800BE9B25 /* MenuProfileVC.swift */,
-				D80D58C929367E7A00BE9B25 /* Service */,
-				D80D58C329367B7500BE9B25 /* Model */,
-				D80D58C629367D0900BE9B25 /* ViewModel */,
-				D80D58C02936774600BE9B25 /* Json */,
 				D80D58B52936712A00BE9B25 /* Assets.xcassets */,
 				D80D58B72936712A00BE9B25 /* LaunchScreen.storyboard */,
 				D80D58BA2936712A00BE9B25 /* Info.plist */,
@@ -111,6 +114,22 @@
 				D80D58CC2936807300BE9B25 /* GenericService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D80D58D1293781BD00BE9B25 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D80D58B02936712800BE9B25 /* MenuProfileVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D80D58D22937821100BE9B25 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D80D58D32937822A00BE9B25 /* MenuProfileScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80D58D42937822A00BE9B25 /* MenuProfileScreen.swift in Sources */,
 				D80D58B12936712800BE9B25 /* MenuProfileVC.swift in Sources */,
 				D80D58AD2936712800BE9B25 /* AppDelegate.swift in Sources */,
 				D80D58CD2936807300BE9B25 /* GenericService.swift in Sources */,

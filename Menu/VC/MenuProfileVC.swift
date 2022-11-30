@@ -10,10 +10,19 @@ import UIKit
 class MenuProfileVC: UIViewController {
     
     let viewModel: MenuProfileViewModel = MenuProfileViewModel()
+    var screen: MenuProfileScreen?
+    
+    override func loadView() {
+        self.screen = MenuProfileScreen()
+        self.view = self.screen
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemPink
         viewModel.delegate(self)
         viewModel.fetch(.request)
     }
