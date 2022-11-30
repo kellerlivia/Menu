@@ -54,7 +54,7 @@ extension MenuProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.viewModel.numberOfRowsInSection(section: section)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -67,7 +67,14 @@ extension MenuProfileVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func tapSection(_ sender: UIButton) {
-        print(#function)
+        let section = sender.tag
+        if self.viewModel.constainsSection(section) {
+            self.viewModel.tappedSection(type: .remove, section: section)
+            self.screen?.insertRowsTableView(indexPath: self.viewModel.indexPathForSection(section), section: section)
+        } else {
+            self.viewModel.tappedSection(type: .insert, section: section)
+            self.screen?.deleteRowsTableView(indexPath: self.viewModel.indexPathForSection(section), section: section)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

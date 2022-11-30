@@ -33,7 +33,7 @@ class SectionView: UIView {
     lazy var arrowImageView: UIImageView = {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.tintColor = .orange
+        img.tintColor = .systemPink
         return img
     }()
     
