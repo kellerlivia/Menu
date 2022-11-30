@@ -18,7 +18,6 @@ class MenuProfileVC: UIViewController {
     
     override func loadView() {
         self.screen = MenuProfileScreen()
-        self.screen?.setupDelegateTableView(delegate: self, dataSource: self)
         self.view = self.screen
     }
     
@@ -37,7 +36,8 @@ class MenuProfileVC: UIViewController {
 
 extension MenuProfileVC: MenuProfileViewModelDelegate {
     func success() {
-        print("Deu certo!!")
+        self.screen?.setupDelegateTableView(delegate: self, dataSource: self)
+        self.screen?.tableView.reloadData()
     }
     
     func error(_ message: String) {
@@ -50,7 +50,7 @@ extension MenuProfileVC: MenuProfileViewModelDelegate {
 extension MenuProfileVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return self.viewModel.numberOfSection
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +61,8 @@ extension MenuProfileVC: UITableViewDelegate, UITableViewDataSource {
         let view = SectionView()
         view.referenceButton.addTarget(self, action: #selector(tapSection(_:)), for: .touchUpInside)
         view.referenceButton.tag = section
-        view.setupSection(description: "testeee")
+        view.setupSection(description: self.viewModel.titleForSection(section))
+        view.expandButton(value: self.viewModel.constainsSection(section))
         return view
     }
     

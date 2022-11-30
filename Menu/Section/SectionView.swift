@@ -26,7 +26,7 @@ class SectionView: UIView {
     lazy var lineView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .lightGray
         return view
     }()
     
@@ -73,5 +73,13 @@ class SectionView: UIView {
             self.lineView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.lineView.heightAnchor.constraint(equalToConstant: 1)
         ])
+    }
+    
+    public func expandButton(value: Bool) {
+        if value {
+            self.arrowImageView.image = UIImage(systemName: "chevron.compact.up")
+        } else {
+            self.arrowImageView.image = UIImage(systemName: "chevron.compact.down")
+        }
     }
 }

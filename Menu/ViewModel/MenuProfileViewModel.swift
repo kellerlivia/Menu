@@ -21,6 +21,8 @@ class MenuProfileViewModel {
     
     private let service: MenuProfileService = MenuProfileService()
     private weak var delegate: MenuProfileViewModelDelegate?
+    private var data: [MenuProfile] = []
+    private var hiddenSection = Set<Int>()
     
     public func delegate(_ delegate: MenuProfileViewModelDelegate?) {
         self.delegate = delegate
@@ -30,7 +32,8 @@ class MenuProfileViewModel {
         switch typeFetch {
         case .mock:
             self.service.getMenuFromJson { success, error in
-                if let _ = success {
+                if let success = success {
+                    self.data = success.group ?? []
                     self.delegate?.success()
                 } else {
                     self.delegate?.error(error?.localizedDescription ?? "")
@@ -38,12 +41,25 @@ class MenuProfileViewModel {
             }
         case .request:
             self.service.getMenu { success, error in
-                if let _ = success {
+                if let success = success {
+                    self.data = success.group ?? []
                     self.delegate?.success()
                 } else {
                     self.delegate?.error(error?.localizedDescription ?? "")
                 }
             }
         }
+    }
+    
+    public var numberOfSection : Int {
+        return self.data.count
+    }
+    
+    public func titleForSection(_ section: Int) -> String {
+        return self.data[section].title ?? ""
+    }
+    
+    public func constainsSection(_ section: Int) -> Bool {
+        return self.hiddenSection.contains(section)
     }
 }
